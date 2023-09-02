@@ -1,0 +1,106 @@
+:root {
+  --main-color: #0d0d0d;
+  --recipe-color: #cff4fc;
+  --tags-color: #f8d7da;
+}
+/* General Styling */
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-color);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fa-globe {
+  rotate: 25deg;
+}
+
+.fa-close,
+.fa-bars {
+  cursor: pointer;
+}
+
+.item {
+  cursor: pointer;
+  max-height: 250px;
+  border-radius: 10px;
+}
+
+.item img {
+  object-fit: contain;
+  object-position: center;
+}
+.cover {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: top 0.3s ease-in-out;
+  display: grid;
+  place-items: center;
+}
+
+.item:hover .cover {
+  top: 0;
+}
+/* Custom Classes */
+.w-fit {
+  width: fit-content !important;
+}
+
+/* Start NavBar */
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100vh;
+  display: flex;
+}
+
+nav figure {
+  max-width: 3.125rem;
+}
+
+/* start MealDetails Section */
+#mealDetails .recipe-detail,
+.tags {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: var(--recipe-color);
+  color: #000;
+  border-radius: 0.625rem;
+  margin: 0.3125rem;
+}
+
+#mealDetails .tags {
+  background-color: var(--tags-color);
+}
+
+/* Start Search Section */
+#search .form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: gray;
+}
+
+#search ::placeholder {
+  color: gray;
+}
+
+#search ::-ms-input-placeholder {
+  color: gray;
+}
