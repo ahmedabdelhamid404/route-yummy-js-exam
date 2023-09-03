@@ -22,6 +22,8 @@ export function renderHomeMeals(meals, section, id) {
         </div>`;
   }
   $(`#${section}`).html(cartoona);
+  //? to handle the scroll part when user open new section it will scroll to the top page
+  $("html, body").animate({ scrollTop: "0px" }, 0);
   removeLoading();
   /**
    * Adds an event listener to the cards with the specified ID and attaches

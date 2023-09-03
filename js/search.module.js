@@ -30,6 +30,11 @@ async function searchMeals(oper, value) {
     );
   } else {
     if (value.length > 0) {
+      /**
+       * Addresses the mobile browser issue with maxlength attribute by reassigning
+       * the first letter as the input value after truncating it.
+       */
+      $("[name='searchMealFirstLetter']").val(value.slice(0, 1));
       response = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?f=${value.slice(
           0,
