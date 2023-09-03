@@ -25,11 +25,11 @@ Getting Started
 To run the Yummy Project locally or contribute to its development, follow these steps:
 
 1. Clone the repository to your local machine:
-// git clone https://github.com/yourusername/yummy-project.git
+   git clone https://github.com/yourusername/yummy-project.git
 
 Launch the web app by opening the index.html file in your preferred web browser.
 
 Acknowledgments
 We would like to express our gratitude to the creators of the free meal API that powers the Yummy Project. Thank you for making this culinary journey possible!
 
-Enjoy exploring the world of delicious meals with Yummy Project! If you have any questions or suggestions, please don't hesitate to reach out to us through the "Contact Us" section.
+Enjoy exploring the world of delicious meals with Yummy Project.
