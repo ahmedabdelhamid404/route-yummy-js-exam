@@ -94,159 +94,187 @@
       </div>
     </nav>
     <!-- main section that contains all other sections where all sections render & shows -->
-    <div class="container position-relative">
+    <div class="main-container position-relative">
       <!-- home section -->
-      <section id="home" class="d-block py-5">
-        <div class="row g-4" id="mealsContainer"></div>
+      <section id="home" class="d-block">
+        <div class="homa-background text-center">
+          <img src="images/logo.png" alt="logo">
+          <h1 class="text-white display-4 ">Welcome To Yummy Restraunt</h1>
+        </div>
+        <div class="container py-5">
+          <div class="row g-4" id="mealsContainer"></div>
+        </div>
       </section>
       <!-- section where meal details show whenever you click on a meal card to show it's details -->
       <section id="mealDetails" class="text-white d-none py-5">
-        <i
-          id="closeMealDetailsSection"
-          class="fa-solid fa-close fs-5 p-2 mb-4 w-fit ms-auto d-block"
-        ></i>
-        <div class="row g-4">
-          <div class="col-md-4 text-center">
-            <picture class="d-block mb-3 rounded rounded-2 overflow-hidden">
-              <img id="mealDetailsImage" src="" alt="Meal-Picture" />
-            </picture>
-            <h2 id="mealName"></h2>
-          </div>
-          <div class="col-md-8">
-            <h2>Instructions</h2>
-            <p id="mealInstructions"></p>
-            <h3>Area: <span id="mealArea"></span></h3>
-            <h3>Category: <span id="mealCategory"></span></h3>
-            <div class="mb-4">
-              <h3>Recipe:</h3>
-              <div id="recipeContainer"></div>
+        <div class="container">
+          <i
+            id="closeMealDetailsSection"
+            class="fa-solid fa-close fs-5 p-2 mb-4 w-fit ms-auto d-block"
+          ></i>
+          <div class="row g-4">
+            <div class="col-md-4 text-center">
+              <picture class="d-block mb-3 rounded rounded-2 overflow-hidden">
+                <img id="mealDetailsImage" src="" alt="Meal-Picture" />
+              </picture>
+              <h2 id="mealName"></h2>
             </div>
-            <div class="mb-4">
-              <h3>Tags:</h3>
-              <div id="mealTags"></div>
-            </div>
-            <div class="buttons">
-              <a id="mealWebSite" class="btn btn-success me-3" target="_blank">
-                <i class="fa-solid fa-globe me-2"></i><span>Source </span></a
-              >
-              <a id="mealVideo" href="" class="btn btn-danger" target="_blank">
-                <i class="fa-brands fa-youtube me-2"></i><span>Youtube</span></a
-              >
+            <div class="col-md-8">
+              <h2>Instructions</h2>
+              <p id="mealInstructions"></p>
+              <h3>Area: <span id="mealArea"></span></h3>
+              <h3>Category: <span id="mealCategory"></span></h3>
+              <div class="mb-4">
+                <h3>Recipe:</h3>
+                <div id="recipeContainer"></div>
+              </div>
+              <div class="mb-4">
+                <h3>Tags:</h3>
+                <div id="mealTags"></div>
+              </div>
+              <div class="buttons">
+                <a
+                  id="mealWebSite"
+                  class="btn btn-success me-3"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-globe me-2"></i><span>Source </span></a
+                >
+                <a
+                  id="mealVideo"
+                  href=""
+                  class="btn btn-danger"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-youtube me-2"></i
+                  ><span>Youtube</span></a
+                >
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- search seaction -->
       <section id="search" class="d-none py-5">
-        <div class="row g-3 mb-5 input-container">
-          <div class="col-md-6">
-            <input
-              type="text"
-              placeholder="Search By Name"
-              class="form-control"
-              name="searchMealName"
-            />
+        <div class="container">
+          <div class="row g-3 mb-5 input-container">
+            <div class="col-md-6">
+              <input
+                type="text"
+                placeholder="Search By Name"
+                class="form-control"
+                name="searchMealName"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                placeholder="Search By First Letter"
+                class="form-control"
+                name="searchMealFirstLetter"
+                maxlength="1"
+              />
+            </div>
           </div>
-          <div class="col-md-6">
-            <input
-              type="text"
-              placeholder="Search By First Letter"
-              class="form-control"
-              name="searchMealFirstLetter"
-              maxlength="1"
-            />
-          </div>
+          <div class="row g-3" id="searchResultsContainer"></div>
         </div>
-        <div class="row g-3" id="searchResultsContainer"></div>
       </section>
       <!-- categories section -->
       <section id="categories" class="d-none py-5">
-        <div class="row g-4" id="mealsCategories"></div>
+        <div class="container">
+          <div class="row g-4" id="mealsCategories"></div>
+        </div>
       </section>
       <!-- area section -->
       <section id="area" class="d-none py-5">
-        <div class="row g-4" id="mealsArea"></div>
+        <div class="container">
+          <div class="row g-4" id="mealsArea"></div>
+        </div>
       </section>
       <!-- ingredients section -->
       <section id="ingredients" class="d-none py-5">
-        <div class="row g-4" id="mealsImgredients"></div>
+        <div class="container">
+          <div class="row g-4" id="mealsImgredients"></div>
+        </div>
       </section>
       <!-- contact us section -->
       <section
         id="contactus"
         class="d-none vh-100 d-flex align-items-center justify-content-center"
       >
-        <form>
-          <div class="row g-4 input-container">
-            <div class="col-md-6">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter Your Name"
-                name="userName"
-                data-bs-status=""
-              />
-              <div></div>
+        <div class="container">
+          <form>
+            <div class="row g-4 input-container">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Your Name"
+                  name="userName"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Your Email"
+                  name="userEmail"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Enter Your Phone"
+                  name="userTel"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter Your Age"
+                  name="userAge"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter Your Password"
+                  name="userPassword"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Re-enter Password"
+                  name="userRePassword"
+                  data-bs-status=""
+                />
+                <div></div>
+              </div>
             </div>
-            <div class="col-md-6">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Enter Your Email"
-                name="userEmail"
-                data-bs-status=""
-              />
-              <div></div>
-            </div>
-            <div class="col-md-6">
-              <input
-                type="tel"
-                class="form-control"
-                placeholder="Enter Your Phone"
-                name="userTel"
-                data-bs-status=""
-              />
-              <div></div>
-            </div>
-            <div class="col-md-6">
-              <input
-                type="number"
-                class="form-control"
-                placeholder="Enter Your Age"
-                name="userAge"
-                data-bs-status=""
-              />
-              <div></div>
-            </div>
-            <div class="col-md-6">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Enter Your Password"
-                name="userPassword"
-                data-bs-status=""
-              />
-              <div></div>
-            </div>
-            <div class="col-md-6">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Re-enter Password"
-                name="userRePassword"
-                data-bs-status=""
-              />
-              <div></div>
-            </div>
-          </div>
-          <button
-            id="contactUsButton"
-            class="btn btn-outline-success d-block mx-auto mt-4"
-            disabled
-          >
-            Submit
-          </button>
-        </form>
+            <button
+              id="contactUsButton"
+              class="btn btn-outline-success d-block mx-auto mt-4"
+              disabled
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </section>
     </div>
     <!-- Scripts -->

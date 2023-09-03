@@ -130,7 +130,7 @@ function addClickEvent(DOMId, callBackFn, oper, sectioName) {
 
 export function renderMealDetail(meal) {
   //? store last displayed section id in variable to reuse it if i want to go back to this section
-  const lastSectionDisplayed = $(".container").children(".d-block").attr("id");
+  const lastSectionDisplayed = $(".main-container").children(".d-block").attr("id");
   //? to handle the scroll part when user open new section it will scroll to the top page
   $("html, body").animate({ scrollTop: "0px" }, 0);
   //? this part to handle replacing d-block & d-none classes to display the current section & remove all other siblings sections
