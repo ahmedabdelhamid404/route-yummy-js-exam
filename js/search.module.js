@@ -48,15 +48,27 @@ async function searchMeals(oper, value) {
     }
   }
   /**
-   * Checks the API response: if it's an array of objects, it calls 'renderHome' to display results;
-   * if it's null, it prints 'No data found' to the user.
+   * Handles API responses, rendering results or showing 'No data found' if null.
+   * It also addresses issues with Arabic characters causing undefined responses.
    */
-  const { meals } = await response.json();
-  if (meals) {
-    renderHomeMeals(meals.splice(0, 20), "searchResultsContainer", "searName");
-  } else {
+  try {
+    const { meals } = await response.json();
+    if (meals) {
+      renderHomeMeals(
+        meals.splice(0, 20),
+        "searchResultsContainer",
+        "searName"
+      );
+    } else {
+      $("#searchResultsContainer").html(
+        `<span class='text-center w-100 text-white'>Not Found In Database</span>
+        <img class="w-auto d-block mx-auto" src="./images/logo.png" alt="logo-image">`
+      );
+      removeLoading();
+    }
+  } catch (error) {
     $("#searchResultsContainer").html(
-      `<span class='text-center w-100 text-white'>Not Found In Database</span>
+      `<span class='text-center w-100 text-white'>Please Enter English Character</span>
       <img class="w-auto d-block mx-auto" src="./images/logo.png" alt="logo-image">`
     );
     removeLoading();
