@@ -1,4 +1,8 @@
-import { renderHomeMeals, showLoading } from "./ui-render.module.js";
+import {
+  renderHomeMeals,
+  showLoading,
+  removeLoading,
+} from "./ui-render.module.js";
 
 /**
  * This function initiates by selecting all input elements within the search section.
@@ -9,7 +13,7 @@ export function searchAddEvent() {
     searchMeals("name", event.target.value);
   });
   $("[name='searchMealFirstLetter']").keyup((event) => {
-    searchMeals("name", event.target.value);
+    searchMeals("firstLetter", event.target.value);
   });
 }
 
@@ -25,9 +29,18 @@ async function searchMeals(oper, value) {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`
     );
   } else {
-    response = await fetch(
-      `www.themealdb.com/api/json/v1/1/search.php?f=${value.slice(0, 1)}`
-    );
+    if (value.length > 0) {
+      response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?f=${value.slice(
+          0,
+          1
+        )}`
+      );
+    } else {
+      response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?f=a`
+      );
+    }
   }
   /**
    * Checks the API response: if it's an array of objects, it calls 'renderHome' to display results;
@@ -41,5 +54,6 @@ async function searchMeals(oper, value) {
       `<span class='text-center w-100 text-white'>Not Found In Database</span>
       <img class="w-auto d-block mx-auto" src="./images/logo.png" alt="logo-image">`
     );
+    removeLoading();
   }
 }

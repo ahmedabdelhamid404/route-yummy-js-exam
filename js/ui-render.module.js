@@ -6,7 +6,7 @@ export function showLoading() {
 }
 
 //? Hide Loading Function
-function removeLoading() {
+export function removeLoading() {
   $(".AJAX").fadeOut(500);
 }
 
