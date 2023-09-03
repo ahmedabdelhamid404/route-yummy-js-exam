@@ -92,7 +92,7 @@ nav figure {
 
 /* Start Search Section */
 #search .form-control,
-.form-control:focus {
+#search .form-control:focus {
   background-color: transparent;
   color: gray;
 }
