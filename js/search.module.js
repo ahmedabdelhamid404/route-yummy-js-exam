@@ -18,6 +18,7 @@ export function searchAddEvent() {
  * and sending the 'value' to the API.
  */
 async function searchMeals(oper, value) {
+  showLoading();
   let response;
   if (oper == "name") {
     response = await fetch(
@@ -34,7 +35,6 @@ async function searchMeals(oper, value) {
    */
   const { meals } = await response.json();
   if (meals) {
-    showLoading();
     renderHomeMeals(meals.splice(0, 20), "searchResultsContainer", "searName");
   } else {
     $("#searchResultsContainer").html(
