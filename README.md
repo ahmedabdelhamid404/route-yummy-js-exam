@@ -25,11 +25,4 @@ Welcome to the Yummy Project repository! This web app is your one-stop destinati
    - Results are updated in real-time as you type.
 
 4. **Contact Us**
-   - We value your feedback and questions.
    - The "Contact Us" section includes regex validation for all input fields, ensuring accurate submissions.
-
-## Getting Started
-
-To run the Yummy Project locally or contribute to its development, follow these steps:
-
-1. Clone the repository to your local machine:
