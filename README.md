@@ -1,15 +1,13 @@
 # Yummy Project
 
-Welcome to the Yummy Project repository! This web app is your one-stop destination for discovering delicious meals, their ingredients, descriptions, and more. Yummy Project is built using ECMAScript 6, Bootstrap, HTML, CSS, jQuery, Modules, AJAX, and regular expressions. It utilizes a free meal API to provide a delightful culinary experience.
-
-**Live Link:** [Yummy Project](https://ahmedmohamedabdelhamed.github.io/route-yummy-js-exam/)
+Welcome to the Yummy Project repository! This web app is your one-stop destination for discovering delicious meals, their ingredients, descriptions, and more. Yummy Project uses ECMAScript 6, Bootstrap, HTML, CSS, jQuery, Modules, AJAX, and regular expressions. It utilizes a free meal API to provide a delightful culinary experience.
 
 ## Features
 
 1. **Home Page**
    - The home page showcases a selection of popular meals to tantalize your taste buds.
    - Clicking on a meal takes you to its detailed page, where you can explore ingredients, measurements, and more.
-   - If available, you can also access the source website and a YouTube video for each meal.
+   - You can also access the source website and a YouTube video for each meal.
    - Meals are categorized using tags for easy classification.
 
 2. **Navigation**
